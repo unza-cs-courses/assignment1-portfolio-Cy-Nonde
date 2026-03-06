@@ -112,37 +112,42 @@ The following are checked automatically on each push:
 
 Before submitting, verify:
 
-- [ ] All 4 sections are complete (Home, About, Projects, Contact)
-- [ ] HTML validates with no errors
-- [ ] CSS uses custom properties (variables)
-- [ ] Flexbox is used for at least one component
-- [ ] CSS Grid is used for at least one component
-- [ ] Site is responsive at all breakpoints
-- [ ] All images have alt text
-- [ ] Form inputs have labels
-- [ ] Screenshots added to `/screenshots` folder
-- [ ] README updated with your information
+- [y] All 4 sections are complete (Home, About, Projects, Contact)
+- [y] HTML validates with no errors
+- [y] CSS uses custom properties (variables)
+- [y] Flexbox is used for at least one component
+- [y] CSS Grid is used for at least one component
+- [y] Site is responsive at all breakpoints
+- [y] All images have alt text
+- [y] Form inputs have labels
+- [y] Screenshots added to `/screenshots` folder
+- [y] README updated with your information
 
 ---
 
 ## Your Information
 
-**Name:** [Your Name]
-**Student ID:** [Your Student ID]
-**Design Theme:** [Describe your portfolio theme/style]
+**Name:** [Cyrus Nonde]
+**Student ID:** [2020893536]
+**Design Theme:** [White background, severely animated logos and pictures. Satirical paragraphs.]
 
 ### CSS Techniques Used
-- [ ] CSS Custom Properties
-- [ ] Flexbox
-- [ ] CSS Grid
-- [ ] Media Queries
-- [ ] Other: _______________
+- [Y] CSS Custom Properties
+- [Y] Flexbox
+- [Y] CSS Grid
+- [Y] Media Queries
+- [Y] Other: _DOM: e.g. get.ElementByClassName("example class");______________
 
 ### Challenges & Solutions
-[Describe any challenges you faced and how you solved them]
+[All multimedia content and layout styling was done using files added or/and moved to the same directory
+as the index.html file. This meant having to rectify the previous index.html to include the locations of
+the additional files in a way that follows the assignment structure set. All old locations were simply 
+edited by adding their recquired "pwd" to the originaaly declared #href.
 
 ### Credits
-[List any images, fonts, or resources used with attribution]
+[Google images: logos and the project scenery)
+[font styling: I would like to thank Microsoft for deploying such a versatile software. The editing offered
+is substantially easy, making coding efficient with what many might say is an insider; < article class="list-format" Microsoft
 
 ---
 

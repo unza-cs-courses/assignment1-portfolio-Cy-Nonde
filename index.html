@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="html" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio website for [Your Name]">
-    <title>Portfolio - [Your Name]</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Professional portfolio website for Cyrus Nonde">
+    <title>Portfolio - Cyrus Nonde</title>
+    <link rel="stylesheet" href="css/styles.css" media="print">
 </head>
-<body>
+
+<body class="body">
+    <button id="toggle-dark" class="nav__logo_a nav_logo_a:hover">
+        <img src="images/darkmode.png" alt="Dark Mode">
+    </button>
+
+    
+    <script>
+        const toggle = document.getElementById('toggle-dark');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
     <!--
     ============================================================
     ASSIGNMENT 1: RESPONSIVE PORTFOLIO WEBSITE
-    CSC4035 Web Programming and Technologies
+    CSC4035 Web Programming cand Technologies
 
     Instructions:
     1. Complete all TODO sections below
@@ -32,35 +45,47 @@
                  - Mobile-friendly (hamburger menu optional)
                  - Active state indication
             -->
-            <div class="nav__logo">
-                <a href="#home">[Your Name]</a>
+            <div>
+                <a href="#nav__menu">
+                    <img class="nav__logo nav__logo_a" src="images/logo.png" alt="Drop Menu"></a>
             </div>
-            <ul class="nav__menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+            <ul id="#nav__menu" class="ul nav__menu nav__menu_a nav__menu_a:hover">
+                <li><a href="#home">
+                    <img class="nav__logo_a" src="images/home_logo.png" alt="Home"></a></li>
+                <li><a href="#about">
+                    <img class="nav__logo_a" src="images/about_logo.png" alt="About"></a></li>
+                <li><a href="#projects">
+                    <img class="nav__logo_a" src="images/projects_logo.png" alt="Projects"></a></li>
+                <li><a href="#contact">
+                    <img class="nav__logo_a" src="images/contact_logo.png" alt="Contact"></a></li>
             </ul>
         </nav>
     </header>
 
+
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
+            
             <!-- TODO: Create hero section
                  Requirements:
                  - Your name (h1)
                  - Professional tagline
-                 - Call-to-action button
+                 - Call-to-action buttonconst toggle = document.getElementById("toggle-dark");
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+});
                  - Consider using Flexbox for layout
             -->
-            <div class="hero__content">
-                <h1>Your Name</h1>
+            <div class="container">
+                <h1 class="hero_content">Cyrus Nonde</h1>
+
                 <p class="hero__tagline">
-                    <!-- TODO: Add your professional tagline -->
+                      Once the work begins, you will know.
                     Web Developer | Designer | Problem Solver
                 </p>
-                <a href="#contact" class="btn btn--primary">Get In Touch</a>
+                <a href="#contact me" class="btn btn--primary">Get In Touch</a>
             </div>
         </section>
 
@@ -75,13 +100,14 @@
                  - Use CSS Grid or Flexbox for layout
             -->
             <div class="container">
-                <h2>About Me</h2>
+                <h2 class="about_h2">About Me</h2>
+
                 <div class="about__content">
                     <div class="about__image">
                         <!-- TODO: Add your profile image -->
-                        <img src="images/profile-placeholder.jpg" alt="Profile photo of [Your Name]">
+                        <img class="img img:hover" src="images/About.png" alt="Profile photo of Cyrus Nonde">
                     </div>
-                    <div class="about__text">
+                    <div class="about__text_p">
                         <p>
                             <!-- TODO: Write your professional bio (150+ words)
                                  Include:
@@ -90,17 +116,27 @@
                                  - Your goals
                                  - What makes you unique
                             -->
-                            [Your professional bio goes here. Write at least 150 words about yourself,
-                            your background, your passion for web development, and your goals.
-                            This is your opportunity to introduce yourself to potential employers or clients.]
+                                My full names are Cyrus Nonde. I was born in Lusaka, at the University Teaching Hospitals.
+                            I spent most of my young life in Chilanga, Zambia, but was originally raised in Lilanda, Matero.
+                            Growing up in Matero was difficult; noisy bars, noisy passers-by; something had to change. We moved
+                            to Chilanga in 2012, during the original mitigations of the Digital Divide, computers were slowly
+                            distributed to all competent users with monetary funds to purchase them. This gave me a chance to
+                            develop <strong>Computer-literacy</strong>. Web development took me by the storm during high-school,
+                            and I thought learning HTML and CSS would teach me how to hack devices, webpages, and servers. <em>I
+                            learnt many selectors, tags, elements and classes, their :pseudo conterparts and how to style 
+                            them</em>. As a Web Designer and Security Technician, my goal is to increase <em>Computer-literacy</em>
+                            and design the best Webpages America has to see. <strong>I have a Regera</strong>.
                         </p>
-                        <h3>Skills</h3>
-                        <ul class="skills-list">
+
+                        <h3 class="about__text_h3">Skills</h3>
+                        <ul class="ul skills-list">
                             <!-- TODO: Add your skills -->
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>JavaScript</li>
-                            <li>Responsive Design</li>
+                            <li><span class="skills-list_li">HTML5</span></li>
+                            <li><span class="skills-list_li">CSS3</span></li>
+                            <li><span class="skills-list_li">JavaScript</span></li>
+                            <li><span class="skills-list_li">Responsive Design</span></li>
+                            <li><span class="skills-list_li">Parallel Computing</span></li>
+                            <li><span class="skills-list_li">Wireless Networking</span></li>
                             <!-- Add more skills -->
                         </ul>
                     </div>
@@ -118,66 +154,75 @@
                  - Use CSS Grid for card layout
             -->
             <div class="container">
-                <h2>My Projects</h2>
+                <h2 class="projects_h2">My Projects</h2>
                 <div class="projects__grid">
+                    
                     <!-- Project Card 1 -->
-                    <article class="project-card">
+                    <article class="project-card project-card:hover">
                         <!-- TODO: Replace with your project -->
-                        <img src="images/project1-placeholder.jpg" alt="Screenshot of Project 1">
+                        <img class="about__image" src="images/ai_garden_pool.png" alt="Pool X471835">
                         <div class="project-card__content">
-                            <h3>Project Title 1</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
+                            <h3 class="project-card__content_h3">Green AI</h3>
+                            <p class="project-card__content_p">
+                                This project was centered around the use of a manually designed, human-like, bot for
+                                easy human chores. MIMD CPUs were used along with rare metals and Silver-Zinc Alloys.
+                                The <em>Green AI</em> where coded to generate landscape ideas at an exponential rate.
                             </p>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="https://youtube.com/shorts/EdibrOLfPec?si=Nx-mabyu5NsVOYue" class="btn btn--small">Live Demo</a>
+                                <a href="git@github.com:unza-cs-courses/lab01-html-Cy-Nonde.git" class="btn btn--small btn--outline">GitHub</a>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project Card 2 -->
-                    <article class="project-card">
+                    <article class="project-card project-card:hover">
                         <!-- TODO: Replace with your project -->
-                        <img src="images/project2-placeholder.jpg" alt="Screenshot of Project 2">
+                        <img class="about__image" src="images/machine_learning.png" alt="AI using ML to derive Simpson's Rule">
                         <div class="project-card__content">
-                            <h3>Project Title 2</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
+                            <h3 class="project-card__content_h3">Machine Learning</h3>
+                            <p class="project-card__content_p">
+                                This project builds on my work on the <strong>Green AI</strong> project. I, me and 
+                                my team, me, found a way to store output of any instruction and subtask, on a derive
+                                with fast access times, giving the AI ability to traceback previous <em>stepping 
+                                stones</em> that led to solving an old problem. <em>Patterns of thought are learnt.</em>
                             </p>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="https://youtube.com/shorts/2z-4pDFsiE?si=dyLDoLPadHdGnykM" class="btn btn--small">Live Demo</a>
+                                <a href="git@github.com:unza-cs-courses/lab02-css-Cy-Nonde.git" class="btn btn--small btn--outline">GitHub</a>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project Card 3 -->
-                    <article class="project-card">
+                    <article class="project-card project-card:hover">
                         <!-- TODO: Replace with your project -->
-                        <img src="images/project3-placeholder.jpg" alt="Screenshot of Project 3">
+                        <img class="about__image" src="images/bio-mechanical_living.png" alt="Stage 3: Final Intergration">  
                         <div class="project-card__content">
-                            <h3>Project Title 3</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
+                            <h3 class="project-card__content_h3">Bio-Mechanical Living</h3>
+                            <p class="project-card__content_p">
+                                My Final Project. Bio-mechanical living is the unified existence of man, and the logical
+                                machine. <em>Logical Machines</em> are intricately developed, exponentially evolved 
+                                dispatches of AI that have and <strong>did go through</strong> <em>Machine Learning</em>
+                                tuning, and installation of high performance, sometimes airfree computers. These complex 
+                                AI dispatches (<em>prefered term, Bio-Mech</em>) are delivered to human communities and 
+                                can lend a hand, schedule a meeting, conduct surgeries; all while having the ability to 
+                                jusdge with heart. <strong>The body and mind of a machine, the heart of Man.</strong>
                             </p>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="https://youtube.com?shorts/4ij4NbIMKXg?si=uQfz9c8BasH$I" class="btn btn--small">Live Demo</a>
+                                <a href="git@github.com:unza-cs-courses/lab03-layout-Cy-Nonde.git" class="btn btn--small btn--outline">GitHub</a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- TODO: Add more project cards if desired -->
+                    
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact">
+        
             <!-- TODO: Create contact section
                  Requirements:
                  - Section heading (h2)
@@ -189,12 +234,14 @@
                  - All inputs must have associated labels
                  - Use HTML5 validation attributes
             -->
+        <section id="contact" class="contact"></section>
             <div class="container">
-                <h2>Contact Me</h2>
-                <form class="contact__form" action="#" method="POST">
+                <h2 class="contact_h2">Contact</h2>
+                <form class="contact__form" action="contact" method="POST">
+                    
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input
+                        <label class="form-group_label" for="name">Name</label>
+                        <input class="form-group_input form-group-input:focus"
                             type="text"
                             id="name"
                             name="name"
@@ -203,28 +250,31 @@
                             minlength="2"
                         >
                     </div>
+                    
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input
+                        <label class="form-group_label" for="email">Email</label>
+                        <input class="form-group_input form-group-input:focus"
                             type="email"
                             id="email"
                             name="email"
                             required
-                            placeholder="your.email@example.com"
+                            placeholder="cy.nonde@cs.unza.zm"
                         >
                     </div>
+                    
                     <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input
+                        <label class="form-group_label" for="subject">Subject</label>
+                        <input class="form-group_input form-group-input:focus"
                             type="text"
                             id="subject"
                             name="subject"
                             placeholder="What is this regarding?"
                         >
                     </div>
+
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea
+                        <label class="form-group_label" for="message">Message</label>
+                        <textarea class="form-group_textarea form-group_textarea:focus"
                             id="message"
                             name="message"
                             required
@@ -233,7 +283,8 @@
                             minlength="10"
                         ></textarea>
                     </div>
-                    <button type="submit" class="btn btn--primary">Send Message</button>
+
+                    <button type="submit" class="btn btn--primary btn--primary:hover"><em>Send Message</em></button>
                 </form>
             </div>
         </section>
@@ -247,13 +298,14 @@
              - Social media links (optional)
              - Back to top link (optional)
         -->
-        <div class="container">
-            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+        <div class="footer.container">
+            <p>&copy; 2026 Cyrus Nonde. All rights reserved.</p>
             <nav class="footer__social">
                 <!-- TODO: Add your social media links -->
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                <a href="#" aria-label="Twitter">Twitter</a>
+                <a class="footer__social_a:hover" href="https://facebook.com/cyrus.nonde" aria-label="Facebook">Facebook</a>
+                <a class="footer__social_a:hover" href="https://www.instagram.com/cyrus_1080" aria-label="Instagram">Instagram</a>
+                <a class="footer__social_a:hover" href="https://github.com/Cy-Nonde" aria-label="GitHub">GitHub</a>
+                <a class="footer__social_a:hover" href="#home" aria-label="Go Back To Top">Go Back To Top</a>
             </nav>
         </div>
     </footer>
